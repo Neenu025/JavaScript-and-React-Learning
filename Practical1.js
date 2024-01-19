@@ -62,3 +62,28 @@ switch (number) {
     alert("Not found");
 }
 //Switch statement end
+
+//Function in Js - sample1
+function Sample(){
+    console.log("Javascript")
+}
+Sample()
+
+//Function in Js - sample2
+let Number = Math.random() //random is a build in function for generating a random  number
+console.log(Number)
+
+//Function for simple addition
+function Add(num1, num2){
+
+let result = num1 + num2
+return result
+}
+console.log(Add(20,50))
+
+//Function example with prompt
+function Name(){
+    let name = prompt("What is your name")
+    console.log(`Welcome ${name}`)
+}
+Name()
