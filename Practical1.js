@@ -88,4 +88,59 @@ function Name(){
 }
 Name()
 
+//calling one function inside another function
 
+function Name(text){
+  console.log("Welcome " + text)
+}
+
+function Input(){
+  let name = prompt("What is your name: ")
+  Name(name)  // Calling the other function within the function
+}
+
+Input()
+
+//Funtion to find mIn value
+function Min(num1,num2){
+  if(num1 < num2){
+    console.log("Small")
+  }else{
+    console.log("Big")
+  }
+
+}
+Min(22,75)
+
+//Function example 
+var x = 1
+a()
+b()
+console.log(x)
+
+
+function a()
+  var x = 10
+  console.log(x)
+function b()
+  var x = 100
+  console.log(x)
+//out put of this program is 
+//10
+//100
+//1
+
+var a = 10
+console.log(a)
+
+console.log(x)
+
+var a
+console.log(a)
+
+if(a === undefined){
+  console.log("a is undefined")
+}
+else{
+  console.log("a is not undefined")
+}
