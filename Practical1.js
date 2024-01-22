@@ -200,3 +200,129 @@ function x(){         //Callback function
 function y(x){        //this is higher order function
   x()
 }
+
+///MAP functions//
+const arr1 = [4,11,3,20,5,9]
+
+function double(x){
+  return x * 2
+}
+
+const output1 = arr.map(double)
+console.log(output)
+
+//Triple
+function triple(x){
+  return x * 3
+}
+const output2 = arr.map(triple)
+console.log(output2)
+
+//Binary
+function Binary(x){
+  return x.toString(2)
+}
+const output6 = arr.map(Binary)
+console.log(output6)
+
+//OR as an Arrow function
+const output = arr.map((x)=>x.toString(2))
+console.log(output)
+
+
+// Filter functions//
+const arr2 = [4,11,3,20,5,9]
+function isOdd(x){
+  return x%2
+}
+
+const output3 = arr2.filter(isOdd)
+console.log(output3)
+
+//Example 2
+const arr3 = [3,11,8,25,5,9]
+
+const output4 = arr3.filter((x) => x>7)
+console.log(output4)
+
+//Reduce function
+const numbers = [1, 2, 3, 4, 5];
+
+const sum = numbers.reduce((accumulator, current) => accumulator + current, 0);
+
+console.log(sum); // Outputs: 15
+
+
+//reduce example 2
+const findss = [5,44,8,6,51,3] 
+const output5 = findss.reduce(function(max, curr){
+  if (curr > max){
+  max = curr
+}
+  return max 
+}, 0 )
+console.log(output5)
+
+//Reduce example 3 - TO find sum of values in array
+const output7 = arr.reduce(function(acc,curr){
+  acc = acc +curr
+  return acc
+},0)
+console.log(output7)
+
+// Reduce to find the max value of an arrsy
+
+arr = [2,4,7,3,60,24]
+const output = arr.reduce(function(max,curr){
+    if (curr >max){
+        max = curr}
+    return max
+    
+},0)
+console.log(output)
+
+//Reduce example 4
+const users = [
+  { firstname: "Lisna", lastname: "Thomas", age: 25 },
+  { firstname: "Justin", lastname: "Issac", age: 28 },
+  { firstname: "Aleena", lastname: "Baby", age: 16 },
+  { firstname: "Albin", lastname: "Roy", age: 16 }
+];
+
+const output = users.reduce(function(acc,curr){
+    if(acc[curr.age]){
+        acc[curr.age] = ++acc[curr.age]
+    }else{
+        acc[curr.age] = 1
+    }
+    return acc
+    
+},{})
+console.log(output)
+
+//Reduce example 5
+const users = [
+  { firstname: "Lisna", lastname: "Thomas", age: 25 },
+  { firstname: "Justin", lastname: "Issac", age: 28 },
+  { firstname: "Aleena", lastname: "Baby", age: 16 },
+  { firstname: "Albin", lastname: "Roy", age: 16 }
+];
+
+const output = users.filter((x) =>x.age<20).map((x) =>x.firstname)
+console.log(output)
+
+//Reduce example 6
+const users = [
+  { firstname: "Lisna", lastname: "Thomas", age: 15 },
+  { firstname: "Justin", lastname: "Issac", age: 28 },
+  { firstname: "Aleena", lastname: "Baby", age: 26 },
+  { firstname: "Albin", lastname: "Roy", age: 16 }
+];
+
+const op = users.reduce(function(acc, current){
+    if (current.age<20){
+        acc.push(current.firstname)
+    }
+    return acc
+},[])
+console.log(op)
