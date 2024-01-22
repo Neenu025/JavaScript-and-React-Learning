@@ -144,3 +144,59 @@ if(a === undefined){
 else{
   console.log("a is not undefined")
 }
+
+// Closure example
+function Outer(){
+  var a = 20
+  function Inner(){
+    console.log(a)
+  }
+  return Inner()
+}
+var close = Outer()
+close()
+
+//Function statement
+function a(){
+  console.log("Javascript training")
+}
+
+//Function expression
+
+var b = function (){
+  console.log("b is called")
+}
+
+//Anonymous functions
+
+function(){
+
+}
+// call back function
+function (y){
+
+}
+x(function y(){
+
+})
+//Call back functions
+setTimeout(function(){
+  console.log("Timer")},5000)
+
+function x(y){
+  console.log("x")
+  y()
+}
+
+x(function(y){
+  console.log("y")
+}) 
+//out put will be x,y, timer
+
+//Higher-order functions
+function x(){         //Callback function
+  console.log("Namaste")
+}
+function y(x){        //this is higher order function
+  x()
+}
