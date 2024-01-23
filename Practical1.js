@@ -326,3 +326,12 @@ const op = users.reduce(function(acc, current){
     return acc
 },[])
 console.log(op)
+
+//
+const op = users.reduce(function(acc, current){
+  if (current.age<20){
+      acc.push(current.firstname)
+  }
+  return acc
+},[])
+console.log(op)
