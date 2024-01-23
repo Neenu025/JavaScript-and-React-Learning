@@ -1,10 +1,17 @@
 const cart = ["tops", "Jeans", "Kurta","Croptops"]
-const promise = createOrder(cart)
-console.log(promise)
 
-promise.then(function(OrderId){
-    // proceedToPayment(OrderId)
+
+createOrder(cart)
+.then(function(OrderId){
     console.log(OrderId)
+    return OrderId
+})
+.then(function(OrderId){
+    return proceedToPayment(OrderId)
+})
+.then(function(paymentInfo){
+    console.log(paymentInfo)
+    return paymentInfo
 })
 .catch(function(err){
     console.log(err.message)
@@ -31,6 +38,12 @@ function createOrder(cart){
     })
 
     return pr
+}
+
+function proceedToPayment(OrderId){
+    return new Promise(function(resolve,reject){
+        resolve("Payment successful")
+    })
 }
 
 function validateCart(){
