@@ -11,12 +11,12 @@ async function getData(){
 }
 const dataPromise = getData()
 
-dataPromise.then (res => console.log(res))
+dataPromise.then (res => console.log(res)) //used then method to get data responese out of promises
 
 
 //async await example
 async function handlePromises(){
-    const val = await p
+    const val = await p  ///await always comes before promises
     console.log(val)
 }
 handlePromises()
